@@ -1,4 +1,4 @@
 from ossapi import Ossapi
 
-def handlePlay(playId: int) -> str:
+def handlePlay(api: Ossapi, playId: int) -> str:
     pass

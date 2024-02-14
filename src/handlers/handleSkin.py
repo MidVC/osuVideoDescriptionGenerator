@@ -1,4 +1,4 @@
-from ossapi import OssApi
+from ossapi import Ossapi
 
-def handleSkin(mods: str) -> str:
+def handleSkin(api: Ossapi, mods: str) -> str:
     pass
