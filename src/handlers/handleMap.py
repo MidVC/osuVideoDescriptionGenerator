@@ -1,6 +1,6 @@
-from ossapi import Ossapi, Beatmap
+from ossapi import Ossapi, Beatmap, Mod
 
-def handleMap(api: Ossapi, mapID: int) -> str :
+def handleMap(api: Ossapi, mapID: int, mods:Mod) -> str :
     map = api.beatmap(beatmap_id=mapID)
 
     ans = "Map:https://osu.ppy.sh/beatmaps/" + str(mapID) + "\n"

@@ -1,4 +1,4 @@
 from ossapi import Ossapi
 
-def handleSkin(api: Ossapi, mods: str) -> str:
+def handleSkin(mods: str) -> str:
     return ""
