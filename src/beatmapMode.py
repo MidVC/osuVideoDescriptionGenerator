@@ -12,6 +12,15 @@ api = Ossapi(clientId, clientSecret)
 userId = os.getenv("OSUUSERID")
 
 def handleBeatmapMode():
-    beatmapId = input("Please input beatmap ID")
+    beatmapId = input("Please input beatmap ID: ")
     beatmapScore = api.beatmap_user_score(beatmap_id=beatmapId, user_id=userId)
 
+    ans = ""
+    ans += handlers.handlePlay(api, beatmapScore.score, beatmapScore.position)
+    ans += handlers.handlePlayer(api, userId)
+    ans += handlers.handleSkin(beatmapScore.score.mods.short_name())
+    ans += handlers.handleMap(api, beatmapId, beatmapScore.score.mods)
+
+    return ans
+
+print(handleBeatmapMode())
