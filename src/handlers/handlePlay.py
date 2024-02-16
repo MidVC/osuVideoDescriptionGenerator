@@ -1,4 +1,4 @@
-from ossapi import Ossapi
+from ossapi import Ossapi, Score
 
-def handlePlay(api: Ossapi, playId: int) -> str:
-    pass
+def handlePlay(api:Ossapi, score:Score, rank:int) -> str:
+    return ""
