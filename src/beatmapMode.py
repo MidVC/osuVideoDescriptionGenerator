@@ -16,7 +16,7 @@ def handleBeatmapMode():
     beatmapScore = api.beatmap_user_score(beatmap_id=beatmapId, user_id=userId)
 
     ans = ""
-    ans += handlers.handlePlay(api, beatmapScore.score, beatmapScore.position)
+    ans += handlers.handlePlay(api, beatmapScore.score)
     ans += handlers.handlePlayer(api, userId)
     ans += handlers.handleSkin(beatmapScore.score.mods.short_name())
     ans += handlers.handleMap(api, beatmapId, beatmapScore.score.mods)
