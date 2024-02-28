@@ -1,6 +1,6 @@
 import os
 from ossapi import Ossapi, Score, Beatmap, User, mod
-import handlers
+import src.handlers as handlers
 from dotenv import load_dotenv
 
 load_dotenv('../.env.midc')
